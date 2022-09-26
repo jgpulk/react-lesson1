@@ -1,11 +1,35 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
+  const expenses = [
+    {
+      id: 'e1',
+      title: 'Iphone 14 Pro',
+      amount: 1600,
+      date: new Date(2020, 7, 14),
+    },
+    { id: 'e2', title: 'Netflix', amount: 20, date: new Date(2021, 2, 12) },
+    {
+      id: 'e3',
+      title: 'Galaxy Classix Z1',
+      amount: 600,
+      date: new Date(2021, 2, 28),
+    },
+    {
+      id: 'e4',
+      title: 'LG Ultragear',
+      amount: 100,
+      date: new Date(2021, 5, 12),
+    },
+  ];
+
   return (
     <div>
-      <h2>Let's get started React!</h2>
-      <ExpenseItem />
-      <ExpenseItem />
+      <h2>Let's get started with my Expenses!</h2>
+      <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} />
+      <ExpenseItem title={expenses[1].title} amount={expenses[1].amount} date={expenses[0].date} />
+      <ExpenseItem title={expenses[2].title} amount={expenses[2].amount} date={expenses[0].date} />
+      <ExpenseItem title={expenses[3].title} amount={expenses[3].amount} date={expenses[0].date} />
     </div>
   );
 }
